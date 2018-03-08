@@ -1,0 +1,26 @@
+<view>
+  <image src='./../../image/TIMER.png' style='width:100%; height:300rpx;'></image>
+  <view class="scroll_box"> 
+    <scroll-view scroll-x style="width: auto;overflow:hidden;">
+      <view class="item_list" wx:for="{{listData}}" wx:key="index" data-topic="{{item}}" bindtap="goTodetail" style='background-color:{{item.color}}'>
+          <image src='{{item.img}}' style='width:62rpx;height:100rpx;'></image>
+          <text class='listText'>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='storyList'>
+    <view class='Head'>
+      <view class='headLeft'>Latest Posts</view>
+      <view class='headRight' catchtap='goToMore'>Read all
+      <text class='iconfont icon-right'></text>
+      </view>
+    </view>
+    <scroll-view scroll-y class='scrollView'
+                 bindscrolltolower="getMoreList">
+      <view class='story' wx:for="{{ textList }}" wx:key="index" catchtap='goDetail' data-id="{{ item.id }}">
+        <image src='../../image/post_image_2.png'></image>
+        <view>{{ item.title }}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

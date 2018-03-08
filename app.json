@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/post/post",
+    "pages/Breand/Breand",
+    "pages/setting/setting",
+    "pages/list/list",
+    "pages/aboutUs/aboutUs",
+    "pages/likePost/liskePost"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "掌故",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#9B9B9B",
+    "selectedColor": "#4A90E2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Read",
+        "iconPath": "./image/READ_ICON/READ.png",
+        "selectedIconPath": "./image/READ_ICON/READ_SEL.png"
+      },
+      {
+        "pagePath": "pages/Breand/Breand",
+        "text": "Breand",
+        "iconPath": "./image/BREAND_ICON/BRAND.png",
+        "selectedIconPath": "./image/BREAND_ICON/BRAND_SEL.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "setting",
+        "iconPath": "./image/SETTINGS_ICON/SETTINGS.png",
+        "selectedIconPath": "./image/SETTINGS_ICON/SETTINGS_SEL.png"
+      }
+    ]
+  }
+}

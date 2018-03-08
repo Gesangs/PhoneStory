@@ -1,0 +1,91 @@
+/* pages/post.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.titleImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.node_wrap {
+  position: absolute;
+  top: 400rpx;
+  display: block;
+  background-color: #fff;
+  /* width: 100%; */
+  border-radius: 46rpx 46rpx 0 0;
+}
+
+.Title {
+  font-weight: bold;
+  display: block;
+  padding: 0rpx 36rpx;
+  font-size: 46rpx;
+}
+
+.titles {
+  font-size: 10px;
+  margin: 10rpx 36rpx;
+}
+
+.author {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.timer {
+  color: rgb(159, 159, 159);
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.nodeStyle {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  margin: 50rpx 36rpx;
+}
+
+.imgStyle {
+  margin: 20rpx 0;
+}
+
+.textStyle {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  margin: 20rpx 0;
+  text-indent: 60rpx;
+}
+
+.h2Style {
+  font-weight: 500;
+}
+
+.dianZan {
+  width: 135rpx;
+  height: 135rpx;
+  background-size: 100% 100%;
+  border-radius: 135rpx;
+  z-index: 100;
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+}
+
+.dianZan2 {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+  background-color: #d0021b;
+  border-radius: 120rpx;
+  opacity: 0;
+  position: fixed;
+  bottom: 45rpx;
+  right: 45rpx;
+}

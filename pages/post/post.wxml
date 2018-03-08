@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view>
+<image class='titleImage' src='{{ textCon.titleImage }}' style="width:100%"></image>
+<scroll-view class="node_wrap">
+  <text class='Title'>
+  {{ textCon.Title }}
+  </text>
+  <view class='titles'>
+    <text class='author'>
+      {{ textCon.author }} 
+    </text><text class='timer'>{{ textCon.timer }}</text>
+    
+  </view>
+  <rich-text class='nodeStyle' nodes="{{textCon.nodes}}"></rich-text>
+</scroll-view>
+<image animation="{{animation1}}" class='dianZan' src="{{DZStyle}}" bindtap='DianZan'></image>
+<view animation="{{animation2}}" class='dianZan2'>+{{ counts }}</view>   
+
+</view>

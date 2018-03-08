@@ -1,0 +1,69 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.90",
+	"appid": "wx503d3cd3589f3233",
+	"projectname": "demo",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "setting",
+					"pathName": "pages/setting/setting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "Breand",
+					"pathName": "pages/Breand/Breand",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "like",
+					"pathName": "pages/likePost/liskePost",
+					"query": ""
+				}
+			]
+		}
+	}
+}

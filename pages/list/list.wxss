@@ -1,0 +1,126 @@
+page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.list-wrap {
+  box-sizing: border-box;
+  width: 94%;
+  margin: 20rpx auto;
+  height: 560rpx;
+  border-radius: 30px;
+  position: relative;
+  /* box-shadow: 0px 4rpx 6rpx 1rpx rgba(0,0,0,0.14); */
+}
+.textList{
+  width: 90%;
+  margin: 36rpx auto;
+}
+.head {
+  display: flex;
+  padding: 36rpx 0rpx 20rpx 40rpx;
+}
+.head .nameTime{
+  margin-left: 30rpx;
+  height: 84rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.head .name {
+  font-size: 24rpx;
+  /* font-weight: 600;  */
+  display: block;
+}
+.head .time {
+  display: block;
+  font-size: 18rpx;
+  margin-top: 12rpx;
+  color: rgba(0,0,0,0.5);
+}
+.headPic {
+  flex: 0 0 84rpx;
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 84rpx;
+}
+.textSum {
+  padding-top: 70rpx;
+  color: #ffffff;
+}
+.textSum .title {
+  font-size: 44rpx;
+  font-weight: 700;
+}
+.textSum .summary {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  line-height: 45rpx;
+}
+.whiteboard {
+  width: 100%;
+  height: 160rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+   border-radius: 0rpx 0rpx 30px 30px; 
+}
+.shareBtn{
+  width: 120rpx;
+  height: 80rpx;
+  background-color: rgb(235, 85, 70);
+  border-radius: 13px;
+  margin-right: 40rpx;
+}
+.shareBtn image{
+  margin: 10rpx 0;
+  width: 56rpx;
+  height: 60rpx;
+}
+.list-wrap:nth-child(3n+1) {
+  background-color: rgb(255, 217, 62);
+}
+.list-wrap:nth-child(3n+1) .textSum {
+  color: #000000;
+}
+.list-wrap:nth-child(3n+2) {
+  background-color: rgb(0, 116, 205);
+}
+.list-wrap:nth-child(3n+0) {
+  background-color: rgb(0, 193, 100);
+}
+
+.TabBar{
+  width: 100%;
+  height: 116rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-shadow: 0 -4rpx 4rpx #D9D9D9;
+}
+
+.TabBar .Tab {
+  width: 33%;
+  height: 115rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TabBar .Tab text{
+  font-size: 22rpx;
+  font-weight: bold;
+  color: #9B9B9B;
+}
+.TabBar .Tab image{
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+}
