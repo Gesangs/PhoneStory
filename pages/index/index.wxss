@@ -25,13 +25,13 @@ page {
   position: absolute;
   width: 100%;
   height: 400rpx;
-  filter: blur(4px);
+  filter: blur(2px);
 }
 .textList-back{
   position: absolute;
   width: 100%;
   height: 410rpx;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
 }
 .head {
   display: flex;
