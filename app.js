@@ -1,12 +1,13 @@
 
+
 App({
     globalData: {
+      banPictrue: wx.getStorageSync("banPictrue")
     },
-    
   },
   {
   onLaunch: function (options) {
-
+    
   },
   onShow: function (options) {
     // Do something when show.
@@ -16,6 +17,5 @@ App({
   },
   onError: function (msg) {
     console.log(msg)
-  },
-  globalData: 'I am global data'
+  }
 })

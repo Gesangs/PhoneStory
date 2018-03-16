@@ -34,7 +34,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 90%;
+  width: 88%;
   margin: auto;
   background-color: #ffffff;
   border-radius: 40rpx 40rpx 0 0;
@@ -54,7 +54,7 @@
   justify-content: space-between;
   align-items: center;
   height: 96rpx;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; 
 }
 .storyList .Head .headLeft{
   font-size: 40rpx;
@@ -72,18 +72,21 @@
   align-items: center;
   height: 180rpx;
   border-bottom: 1px solid #e5e5e5;
+  margin: 0 3%; 
 }
 .storyList .story view {
-  margin: 0 40rpx;
-  font-size: 28rpx;
+  margin: 0 32rpx;
+  font-size: 30rpx;
+  font-weight: 600;
   line-height: 46rpx;
 }
 
 .storyList .story image {
-  flex: 0 0 120rpx;
-  width: 120rpx;
+  flex: 0 0 180rpx;
+  width: 180rpx;
   height: 120rpx;
-  margin-left: 30rpx;
+  margin-left: 28rpx;
+  border-radius: 4px;
 }
 
 .icon-right {

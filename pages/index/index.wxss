@@ -7,13 +7,12 @@ page {
 }
 .list-wrap {
   box-sizing: border-box;
-  width: 94%;
+  width: 93%;
   margin: 20rpx auto;
-  height: 560rpx;
+  height: 432rpx;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  /* box-shadow: 0px 4rpx 6rpx 1rpx rgba(0,0,0,0.14); */
 }
 .textList{
   position: absolute;
@@ -21,79 +20,70 @@ page {
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
-.textList-backimg{
-  position: absolute;
-  width: 100%;
-  height: 400rpx;
-  filter: blur(2px);
-}
 .textList-back{
   position: absolute;
   width: 100%;
-  height: 410rpx;
-  background-color: rgba(0,0,0,0.2);
-}
-.head {
-  display: flex;
-  padding: 36rpx 0rpx 20rpx 40rpx;
-}
-.head .nameTime{
-  margin-left: 30rpx;
-  height: 84rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.head .name {
-  font-size: 24rpx;
-  display: block;
-}
-.head .time {
-  display: block;
-  font-size: 18rpx;
-  margin-top: 12rpx;
-  color: rgba(0,0,0,0.5);
-}
-.headPic {
-  flex: 0 0 84rpx;
-  width: 84rpx;
-  height: 84rpx;
-  border-radius: 84rpx;
+  height: 350rpx;
 }
 .textSum {
-  padding-top: 70rpx;
+  padding-top: 30rpx;
   color: #ffffff;
+  /* white-space: nowrap; */
 }
 .textSum .title {
-  font-size: 44rpx;
+  font-size: 24px;
   font-weight: 700;
+  word-wrap: break-word;
+  word-break: normal;
 }
 .textSum .summary {
   display: block;
   margin-top: 20rpx;
-  font-size: 26rpx;
+  font-size: 11px;
   line-height: 45rpx;
 }
 .whiteboard {
   width: 100%;
-  height: 160rpx;
+  height: 96rpx;
   background-color: #fff;
   position: absolute;
   bottom: 0;
-   border-radius: 0rpx 0rpx 15px 15px; 
+  border-radius: 0rpx 0rpx 15px 15px; 
+  padding: 24rpx 30rpx 16rpx 32rpx;
+  box-sizing: border-box; 
+  display: flex;
+  justify-content: space-between;
+}
+.head {
+  display: flex;
+  align-items: center; 
+}
+.head .name {
+  font-size: 22rpx;
+  display: block;
+  margin-left: 24rpx;
+}
+.headPic {
+  flex: 0 0 56rpx;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 21%;
 }
 .shareBtn{
-  width: 120rpx;
-  height: 80rpx;
-  line-height: 80rpx;
+  width: 80rpx;
+  height: 56rpx;
+  line-height: 56rpx;
   background-color: rgb(235, 85, 70);
-  border-radius: 12px;
-  margin-right: 40rpx;
+  border-radius: 20%;
+  margin: 0;
 }
 .icon-share{
-  font-size: 36rpx;
+  font-size: 30rpx;
   color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 /* .list-wrap:nth-child(3n+1) {
   background-color: rgb(255, 217, 62);

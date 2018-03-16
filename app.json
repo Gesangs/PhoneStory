@@ -9,8 +9,8 @@
     "pages/likePost/liskePost"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#000000",
-    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "掌故",
     "backgroundColor": "#000000",
     "backgroundTextStyle": "light"

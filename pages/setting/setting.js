@@ -1,15 +1,19 @@
-
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    banPictrue: wx.getStorageSync("banPictrue")
+    banPictrue: app.globalData.banPictrue
   },
   setBanPicture: function(e) {
-    wx.setStorageSync("banPictrue", e.detail.value)
-    console.log(wx.getStorageSync("banPictrue"))
+    const value = e.detail.value
+    wx.setStorageSync("banPictrue", value)
+    app.globalData.banPictrue = value
+    wx.reLaunch({
+      url: '../index/index',
+    })
   },
   goToAboutUs: function() {
     wx.navigateTo({

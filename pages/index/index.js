@@ -1,3 +1,4 @@
+const app = getApp();
 import { handleText } from '../../base/class.js';
 Page({
   /**
@@ -6,7 +7,15 @@ Page({
   data: {
     textList: [],
     listNum: 0,
-
+    banPictrue: app.globalData.banPictrue,
+    deg: 135,
+    colorArr: [
+      "#6956ec, #56b2ba",
+      "#3023ae, #c86dd7",
+      "#bd4de8, #ff2366",
+      "#fd4935, #fad414",
+      "#72afd3, #37ecba"
+    ]
   },
   goDetail: function (event) {
     const Id = event.currentTarget.dataset.id;
@@ -27,12 +36,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setTabBarStyle({
-      color: '#FFFFFF',
-      // selectedColor: '#00FF00',
-      backgroundColor: '#000000',
-      // borderStyle: 'white'
-    })
+    // wx.setTabBarStyle({
+    //   color: '#FFFFFF',
+    //   selectedColor: '#00FF00',
+    //   backgroundColor: '#000000',
+    //   borderStyle: 'white'
+    // }
+    let sub = 1;
+    let right = 200;
+    let left = 135;
+    let timer = setInterval(() => {
+      this.setData({
+        deg: (this.data.deg + sub)
+      })
+      if (Math.ceil(this.data.deg) == right || Math.ceil(this.data.deg) == left) {
+        sub = -sub;
+      } 
+    },30)
     const that = this;
     wx.request({
       url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',

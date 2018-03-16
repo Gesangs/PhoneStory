@@ -18,7 +18,7 @@ function getDateDiff(dateTimeStamp) {
   let minC = diffValue / minute
   let result = ""
   if (monthC >= 1) {
-    result = "" + parseInt(monthC) + "月前";
+    result = "" + parseInt(monthC) + "个月前";
   }
   else if (weekC >= 1) {
     result = "" + parseInt(weekC) + "周前";

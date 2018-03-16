@@ -34,7 +34,7 @@ Page({
   getMoreList() {
     const that = this;
     wx.request({
-      url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',
+      url: 'https://zhuanlan.zhihu.com/api/columns/leaninglog/posts',
       data: {
         limit: 5,
         offset: that.data.listNum
@@ -84,14 +84,15 @@ Page({
   onLoad: function (options) {
     const that = this;
     wx.request({
-      url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',
-      data: {
-        limit: 5
-      },
+      url: 'https://zhuanlan.zhihu.com/api/columns/leaninglog/posts',
+      // data: {
+      //   limit: 5
+      // },
       success: function (res) {
         const con = {
           textList: that.handleList(res.data),
         };
+        console.log(res)
         // that.data.listNum += 5;
         that.setData(con);
       }

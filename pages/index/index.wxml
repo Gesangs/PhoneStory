@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view>
    <view wx:for="{{ textList }}" wx:key="index" class='list-wrap'> 
-   <view style='background: url({{ item.titleImg }}) center; background-size:cover;' class='textList-backimg'></view>
-    <view class='textList-back;'></view> 
+    <!-- <view wx:if="{{ !banPictrue }}" style='background: url({{ item.titleImg }}) center; background-size:cover;' class='textList-backimg'></view> -->
+    <view style='background:linear-gradient({{ deg }}deg, {{ colorArr[item.id % 5] }})' class='textList-back'></view> 
     <view class='textList' catchtap='goDetail' data-id="{{ item.id }}">
       <view class='textSum'>
         <text class='title'>{{ item.title }}</text>
@@ -12,14 +12,14 @@
     <view class='whiteboard'>
       <view class='head'>
         <image src="{{ item.headPic }}" class='headPic'></image>
-        <view class='nameTime'>
-          <text class='name'>{{ item.name }}</text>
-          <text class='time'>{{ item.time }}</text>
+        <view class='name'>
+          {{ item.name }}
+          <!-- <text class='time'>{{ item.time }}</text> -->
         </view>
+      </view>
         <button open-type='share' class='shareBtn' data-img="{{ item.titleImg }}" data-title='{{ item.title }}' data-id="{{ item.id }}">
           <text class='iconfont icon-share'></text>
         </button> 
-      </view>
     </view> 
   </view> 
 </view>
