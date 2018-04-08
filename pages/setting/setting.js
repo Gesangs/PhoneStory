@@ -11,9 +11,6 @@ Page({
     const value = e.detail.value
     wx.setStorageSync("banPictrue", value)
     app.globalData.banPictrue = value
-    wx.reLaunch({
-      url: '../index/index',
-    })
   },
   goToAboutUs: function() {
     wx.navigateTo({

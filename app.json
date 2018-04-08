@@ -21,19 +21,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "Read",
+        "text": "文章",
         "iconPath": "./image/READ_ICON/READ.png",
         "selectedIconPath": "./image/READ_ICON/READ_SEL.png"
       },
       {
         "pagePath": "pages/Breand/Breand",
-        "text": "Breand",
+        "text": "分类",
         "iconPath": "./image/BREAND_ICON/BRAND.png",
         "selectedIconPath": "./image/BREAND_ICON/BRAND_SEL.png"
       },
       {
         "pagePath": "pages/setting/setting",
-        "text": "setting",
+        "text": "设置",
         "iconPath": "./image/SETTINGS_ICON/SETTINGS.png",
         "selectedIconPath": "./image/SETTINGS_ICON/SETTINGS_SEL.png"
       }

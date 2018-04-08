@@ -5,29 +5,37 @@ Page({
    */
   data: {
     listData: [{
-      name: 'Blackberry',
-      topic: 'Blackberry（黑莓) ',
-      img: '../../image/BBG10.png',
-      color: '#000000'
+      title: 'Timer周报',
+      topic: '科技资讯',
+      img: '../../image/TimerPaper@2x.png',
+      text: '聚焦本周科技资讯，新鲜的内容加上毒辣的短评，只需3分钟，帮你在周末轻松回顾本周重点。',
+      total: "137",
+      time: "上次更新：2日前"
     },
-    {
-      name: 'Nokia',
-      topic: '诺基亚 (Nokia)',
-      img: '../../image/NOKIA3310.png',
-      color: '#1B6Ec3'
-    },
-    {
-      name: 'Motorola',
-      topic: '摩托罗拉（Motorola）',
-      img: '../../image/MOTO.png',
-      color: '#EC5644'
-    },
-    {
-      name: 'iPhone',
-      topic: 'iPhone',
-      img: '../../image/iPhone3G.png',
-      color: '#fcd046',
-    }],
+      {
+        title: 'Timer周报',
+        topic: '科技资讯',
+        img: '../../image/TimerPaper@2x.png',
+        text: '#000000',
+        total: "",
+        time: ""
+      },
+      {
+        title: 'Timer周报',
+        topic: '科技资讯',
+        img: '../../image/TimerPaper@2x.png',
+        text: '#000000',
+        total: "",
+        time: ""
+      },
+      {
+        title: 'Timer周报',
+        topic: '科技资讯',
+        img: '../../image/TimerPaper@2x.png',
+        text: '聚焦本周科技资讯，新鲜的内容加上毒辣的短评，只需3分钟，帮你在周末轻松回顾本周重点。',
+        total: "",
+        time: ""
+      }],
     textList: [],
     listNum: 0
   },

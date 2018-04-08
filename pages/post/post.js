@@ -132,6 +132,7 @@ Page({
    */
   onLoad: function (options) {
     const conId = options.id;
+    const share = options.share;
     const that = this;
     if (wx.getStorageSync(`DZ${conId}`)) {
       this.setData({
@@ -184,7 +185,10 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
+    wx.redirectTo({
+      url: '../index/index',
+    })
   },
 
   /**

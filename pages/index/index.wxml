@@ -1,39 +1,5 @@
-<!--index.wxml-->
+<import src="../../template/card.wxml"/>
+
 <view>
-   <view wx:for="{{ textList }}" wx:key="index" class='list-wrap'> 
-    <!-- <view wx:if="{{ !banPictrue }}" style='background: url({{ item.titleImg }}) center; background-size:cover;' class='textList-backimg'></view> -->
-    <view style='background:linear-gradient({{ deg }}deg, {{ colorArr[item.id % 5] }})' class='textList-back'></view> 
-    <view class='textList' catchtap='goDetail' data-id="{{ item.id }}">
-      <view class='textSum'>
-        <text class='title'>{{ item.title }}</text>
-        <text class='summary'>{{ item.summary }}</text>
-      </view>
-    </view>
-    <view class='whiteboard'>
-      <view class='head'>
-        <image src="{{ item.headPic }}" class='headPic'></image>
-        <view class='name'>
-          {{ item.name }}
-          <!-- <text class='time'>{{ item.time }}</text> -->
-        </view>
-      </view>
-        <button open-type='share' class='shareBtn' data-img="{{ item.titleImg }}" data-title='{{ item.title }}' data-id="{{ item.id }}">
-          <text class='iconfont icon-share'></text>
-        </button> 
-    </view> 
-  </view> 
+   <template is="card" data="{{textList, deg, colorArr}}"></template>
 </view>
-   <!-- <view class='TabBar'>
-    <view class='Tab'>
-      <image src='../../image/READ_ICON/READ.png'></image>
-      <text>Read</text>
-    </view>
-    <view class='Tab'>
-      <image src='../../image/BREAND_ICON/BRAND.png'></image>
-      <text>Breand</text>
-    </view>
-    <view class='Tab'>
-      <image src='../../image/SETTINGS_ICON/SETTINGS.png'></image>
-      <text>Setting</text>
-    </view>
-  </view>  -->

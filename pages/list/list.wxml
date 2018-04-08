@@ -1,22 +1,4 @@
+<import src="../../template/card.wxml"/>
 <view>
-   <view wx:for="{{ textList }}" wx:key="index" class='list-wrap'>
-    <view class='textList' catchtap='goDetail' data-id="{{ item.id }}">
-      <view class='textSum'>
-        <text class='title'>{{ item.title }}</text>
-        <text class='summary'>{{ item.summary }}</text>
-      </view>
-    </view>
-    <view class='whiteboard'>
-      <view class='head'>
-        <image src="{{ item.headPic }}" class='headPic'></image>
-        <view class='nameTime'>
-          <text class='name'>{{ item.name }}</text>
-          <text class='time'>{{ item.time }}</text>
-        </view>
-        <button open-type='share' class='shareBtn' data-img="{{ item.titleImg }}" data-title='{{ item.title }}' data-id="{{ item.id }}">
-          <image src='../../image/share-icon/SHARE.png'></image>
-        </button> 
-      </view>
-    </view> 
-  </view> 
+    <template is="card" data="{{textList, deg, colorArr}}"></template>
 </view>

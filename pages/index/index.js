@@ -1,4 +1,3 @@
-const app = getApp();
 import { handleText } from '../../base/class.js';
 Page({
   /**
@@ -7,7 +6,6 @@ Page({
   data: {
     textList: [],
     listNum: 0,
-    banPictrue: app.globalData.banPictrue,
     deg: 135,
     colorArr: [
       "#6956ec, #56b2ba",
@@ -52,7 +50,7 @@ Page({
       if (Math.ceil(this.data.deg) == right || Math.ceil(this.data.deg) == left) {
         sub = -sub;
       } 
-    },30)
+    }, 1000 / 60)
     const that = this;
     wx.request({
       url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',
@@ -133,12 +131,13 @@ Page({
   onShareAppMessage: function (res) {
     const imgUrl = res.target.dataset.img;
     const title = res.target.dataset.title;
-    const path = `/pages/post/post?id=${res.target.dataset.id}`;
+    const path = `/pages/post/post?id=${res.target.dataset.id}&share=1`;
     return {
       title: title,
       path: path,
       imageUrl: imgUrl,
       success: function (res) {
+        console.log(res.shareTickets)
         // 转发成功
         wx.showToast({
           title: '成功',

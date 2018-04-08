@@ -1,4 +1,4 @@
-<!--index.wxml-->
+
 <view>
 <image class='titleImage' src='{{ textCon.titleImage }}' style="width:100%"></image>
 <scroll-view class="node_wrap">

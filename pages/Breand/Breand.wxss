@@ -3,24 +3,44 @@
 .scroll_box{
   width: 100%;
   box-sizing: border-box;
-  padding: 30rpx 0;
   overflow: hidden;
-  background: #EFEFF4;
   white-space: nowrap;
 }
 .item_list{
-  width: 228rpx;
-  height: 228rpx;
-  margin-left: 30rpx;
-  border-radius: 50rpx;
-  font-size: 22rpx;
-  font-weight: bold;
-  color: #ffffff;
+  width: 600rpx;
+  height: 400rpx;
+  margin: 30rpx 0 50rpx 6.5%;
+  border-radius: 4.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   display: inline-flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 }
+.item_list image {
+  width: 100%;
+  height: 152rpx;
+}
+.item_list_buttom {
+  flex: 1;
+  padding: 20rpx 46rpx;
+  background-color: #ffffff;
+}
+.item_list_buttom_title{
+  font: medium;
+  font-size: 40rpx;
+}
+.item_list_buttom_text{
+  font-size: 26rpx;
+  white-space: normal;
+  margin-top: 20rpx;
+}
+
+.item_list_buttom_foot{
+  font-size: 16rpx;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .listText {
   display: inline-block;
   width: 228rpx;
@@ -30,7 +50,7 @@
 
 .storyList{
   position: absolute;
-  top: 598rpx;
+  top: 240px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -39,6 +59,7 @@
   background-color: #ffffff;
   border-radius: 40rpx 40rpx 0 0;
   overflow: hidden;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);  
 }
 
 
@@ -58,13 +79,13 @@
 }
 .storyList .Head .headLeft{
   font-size: 40rpx;
-  font-weight: bold;
+  font: medium;
   margin-left: 40rpx;
 }
 .storyList .Head .headRight{
   font-size: 22rpx;
   color: #02ad58;
-  font-weight: bold;
+  font: medium;
   margin-right: 40rpx;
 }
 .storyList .story{
@@ -77,7 +98,7 @@
 .storyList .story view {
   margin: 0 32rpx;
   font-size: 30rpx;
-  font-weight: 600;
+  font: medium;
   line-height: 46rpx;
 }
 
@@ -93,19 +114,6 @@
   font-size: 26rpx; 
   margin-left: 10rpx;
 }
-
-/* .item_list:nth-child(3n+1) {
-  /*黄色  */
-  /* background-color: rgb(255, 217, 62); */
-/* }
-.item_list:nth-child(3n+2) { */
-  /*蓝色  */
-  /* background-color: rgb(0, 116, 205);
-} */
-/* .item_list:nth-child(3n+0) { */
-  /*绿色  */
-  /* background-color: rgb(0, 193, 100);
-} */ 
 
 
 

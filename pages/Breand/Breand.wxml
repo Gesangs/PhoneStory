@@ -1,10 +1,19 @@
 <view>
-  <image src='./../../image/TIMER.png' style='width:100%; height:300rpx;'></image>
   <view class="scroll_box"> 
     <scroll-view scroll-x style="width: auto;overflow:hidden;">
-      <view class="item_list" wx:for="{{listData}}" wx:key="index" data-topic="{{item}}" bindtap="goTodetail" style='background-color:{{item.color}}'>
-          <image src='{{item.img}}' style='width:62rpx;height:100rpx;'></image>
-          <text class='listText'>{{item.name}}</text>
+      <view class="item_list" wx:for="{{ listData }}" wx:key="index" data-topic="{{item}}" bindtap="goTodetail">
+        <image src='{{ item.img }}'></image>
+        <view class='item_list_buttom'>
+          <view class='item_list_buttom_title'>
+            {{ item.title }}
+          </view>
+          <view class='item_list_buttom_text'>
+            {{ item.text }}
+          </view>
+          <view class='item_list_buttom_foot'>
+            {{ item.time }} 共{{ item.total }}期
+          </view>
+        </view>
       </view>
     </scroll-view>
   </view>
