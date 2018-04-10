@@ -17,11 +17,8 @@ function getDateDiff(dateTimeStamp) {
   let hourC = diffValue / hour
   let minC = diffValue / minute
   let result = ""
-  if (monthC >= 1) {
-    result = "" + parseInt(monthC) + "个月前";
-  }
-  else if (weekC >= 1) {
-    result = "" + parseInt(weekC) + "周前";
+  if (weekC >= 1) {
+    result = dateTimeStamp.toLocaleDateString().replace(/\//g, "-");
   }
   else if (dayC >= 1) {
     result = "" + parseInt(dayC) + "天前";

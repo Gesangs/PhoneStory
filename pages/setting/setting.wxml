@@ -2,7 +2,7 @@
   <view class='settingList' catchtap='goToAboutUs'>
     <text class='iconfont icon-us'></text>
     <view class='warp'>
-      <text>关于我们</text>
+      <text class='text-h3'>关于我们</text>
       <text class='iconfont icon-right'></text>
     </view>
     
@@ -10,7 +10,7 @@
   <view class='settingList' catchtap='goToLikeList'>
     <text class='iconfont icon-guzhang'></text>
     <view class='warp'>
-      <text>赞赏的文章</text>
+      <text class='text-h3'>赞赏的文章</text>
     <text class='iconfont icon-right'></text>
     </view>
     
@@ -18,7 +18,7 @@
   <view class='settingList'>
     <text class='iconfont icon-wutu'></text>
     <view class='warp'>
-    <text>无图模式</text>
+    <text class='text-h3'>无图模式</text>
     <switch type='switch' bindchange="setBanPicture" checked='{{ banPictrue }}'></switch>
     </view>
     

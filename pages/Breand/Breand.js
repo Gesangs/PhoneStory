@@ -12,30 +12,22 @@ Page({
       total: "137",
       time: "上次更新：2日前"
     },
-      {
-        title: 'Timer周报',
-        topic: '科技资讯',
-        img: '../../image/TimerPaper@2x.png',
-        text: '#000000',
-        total: "",
-        time: ""
-      },
-      {
-        title: 'Timer周报',
-        topic: '科技资讯',
-        img: '../../image/TimerPaper@2x.png',
-        text: '#000000',
-        total: "",
-        time: ""
-      },
-      {
-        title: 'Timer周报',
-        topic: '科技资讯',
-        img: '../../image/TimerPaper@2x.png',
-        text: '聚焦本周科技资讯，新鲜的内容加上毒辣的短评，只需3分钟，帮你在周末轻松回顾本周重点。',
-        total: "",
-        time: ""
-      }],
+    {
+      title: 'Windows应用测评',
+      topic: '科技资讯',
+      img: '../../image/UWP@2x.png',
+      text: '体验千奇百怪的 Windows 应用程序，在桌面端及移动端的效率神器到小众精选，帮你更加透彻的了解应用之美。',
+      total: "",
+      time: ""
+    },
+    {
+      title: '热评文章',
+      topic: '科技资讯',
+      img: '../../image/Diss@2x.png',
+      text: '针对当下的科技数码大事件作出评论，对新鲜产品第一时间上手体验，分享第一手的观点与感受，既有深度又有风度。',
+      total: "",
+      time: ""
+    }],
     textList: [],
     listNum: 0
   },
@@ -60,7 +52,7 @@ Page({
   goTodetail: function (event) {
     const con = event.currentTarget.dataset.topic;
     wx.navigateTo({
-      url: `../list/list?topic=${con.topic}&topicname=${con.name}`,
+      url: `../list/list?topic=${con.topic}&topicname=${con.title}`,
       fail: function (res) { console.log(res) }
     })
   },
@@ -93,15 +85,14 @@ Page({
     const that = this;
     wx.request({
       url: 'https://zhuanlan.zhihu.com/api/columns/leaninglog/posts',
-      // data: {
-      //   limit: 5
-      // },
+      data: {
+        limit: 5
+      },
       success: function (res) {
         const con = {
           textList: that.handleList(res.data),
         };
-        console.log(res)
-        // that.data.listNum += 5;
+        that.data.listNum += 5;
         that.setData(con);
       }
     })

@@ -1,4 +1,4 @@
-/* pages/setting/setting.wxss */
+@import "../../base/textStyle.wxss";
 @import "../../utils/iconfont.wxss";
 .settingList{
   display: flex;
@@ -9,9 +9,6 @@
   align-items: center;
 }
 
-.warp text {
-  font-weight: bold;
-}
 
 .icon-us, .icon-guzhang, .icon-wutu, .icon-right {
    margin: 0 30rpx; 

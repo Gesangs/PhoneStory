@@ -1,4 +1,4 @@
-/* pages/list.wxss */
+@import "../../base/textStyle.wxss";
 @import "../../utils/iconfont.wxss";
 .scroll_box{
   width: 100%;
@@ -16,6 +16,9 @@
   flex-direction: column;
   overflow: hidden;
 }
+.item_list:last-child {
+  margin-right: 6.5%;
+}
 .item_list image {
   width: 100%;
   height: 152rpx;
@@ -25,18 +28,12 @@
   padding: 20rpx 46rpx;
   background-color: #ffffff;
 }
-.item_list_buttom_title{
-  font: medium;
-  font-size: 40rpx;
-}
 .item_list_buttom_text{
-  font-size: 26rpx;
   white-space: normal;
   margin-top: 20rpx;
 }
 
 .item_list_buttom_foot{
-  font-size: 16rpx;
   text-align: right;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -50,7 +47,7 @@
 
 .storyList{
   position: absolute;
-  top: 240px;
+  top: 480rpx;
   bottom: 0;
   left: 0;
   right: 0;
@@ -78,14 +75,10 @@
   border-bottom: 1px solid #e5e5e5; 
 }
 .storyList .Head .headLeft{
-  font-size: 40rpx;
-  font: medium;
   margin-left: 40rpx;
 }
 .storyList .Head .headRight{
-  font-size: 22rpx;
   color: #02ad58;
-  font: medium;
   margin-right: 40rpx;
 }
 .storyList .story{

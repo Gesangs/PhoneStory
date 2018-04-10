@@ -32,9 +32,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.clearStorageSync()
-    // console.log(app.globalData.banPictrue)
-    console.log(wx.getStorageInfoSync().keys)
   },
 
   /**

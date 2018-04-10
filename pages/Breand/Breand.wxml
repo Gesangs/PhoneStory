@@ -4,13 +4,13 @@
       <view class="item_list" wx:for="{{ listData }}" wx:key="index" data-topic="{{item}}" bindtap="goTodetail">
         <image src='{{ item.img }}'></image>
         <view class='item_list_buttom'>
-          <view class='item_list_buttom_title'>
+          <view class='tetx-h2'>
             {{ item.title }}
           </view>
-          <view class='item_list_buttom_text'>
+          <view class='item_list_buttom_text text-sub2'>
             {{ item.text }}
           </view>
-          <view class='item_list_buttom_foot'>
+          <view class='item_list_buttom_foot text-sub3'>
             {{ item.time }} 共{{ item.total }}期
           </view>
         </view>
@@ -19,8 +19,8 @@
   </view>
   <view class='storyList'>
     <view class='Head'>
-      <view class='headLeft'>认知日志</view>
-      <view class='headRight' catchtap='goToMore'>全部文章
+      <view class='headLeft text-h3'>认知日志</view>
+      <view class='headRight text-sub3' catchtap='goToMore'>全部文章
       <text class='iconfont icon-right'></text>
       </view>
     </view>
@@ -28,7 +28,7 @@
                  bindscrolltolower="getMoreList">
       <view class='story' wx:for="{{ textList }}" wx:key="index" catchtap='goDetail' data-id="{{ item.id }}">
         <image src='{{ item.titleImg }}'></image>
-        <view>{{ item.title }}</view>
+        <view class='text-h3'>{{ item.title }}</view>
       </view>
     </scroll-view>
   </view>

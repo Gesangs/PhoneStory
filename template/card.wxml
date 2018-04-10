@@ -1,20 +1,19 @@
 <template name="card">
-<view wx:for="{{ textList }}" wx:key="index" class='list-wrap'> 
-  <view style='background:linear-gradient({{ deg }}deg, {{ colorArr[item.id % 5] }})' class='textList-back'></view> 
-    <view class='textList' catchtap='goDetail' data-id="{{ item.id }}">
-      <view class='textSum'>
-        <text class='title'>{{ item.title }}</text>
-        <text class='summary'>{{ item.summary }}</text>
-      </view>
-    </view>
-    <view class='whiteboard'>
-      <view class='head'>
-        <image src="{{ item.headPic }}" class='headPic'></image>
-        <view class='name'>
-          {{ item.name }}
-          <!-- <text class='time'>{{ item.time }}</text> -->
+  <view wx:for="{{ textList }}" wx:key="index" class='list-wrap'> 
+    <view style='background:linear-gradient({{ deg }}deg, {{ colorArr[item.id % 5] }})' class='textList-back'></view> 
+      <view class='textList' catchtap='goDetail' data-id="{{ item.id }}">
+        <view class='textSum'>
+          <text class='title text-h1'>{{ item.title }}</text>
+          <text class='summary text-sub1'>{{ item.summary }}</text>
         </view>
       </view>
+      <view class='whiteboard'>
+        <view class='head'>
+          <image src="{{ item.headPic }}" class='headPic'></image>
+          <view class='name text-sub1'>
+            {{ item.name }}
+          </view>
+        </view>
         <button open-type='share' class='shareBtn' data-img="{{ item.titleImg }}" data-title='{{ item.title }}' data-id="{{ item.id }}" style='background:linear-gradient(135deg, {{ colorArr[item.id % 5] }})'>
           <text class='iconfont icon-share'></text>
         </button> 
