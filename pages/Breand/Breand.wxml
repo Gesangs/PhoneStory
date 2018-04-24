@@ -20,7 +20,7 @@
   <view class='storyList'>
     <view class='Head'>
       <view class='headLeft text-h3'>认知日志</view>
-      <view class='headRight text-sub3' catchtap='goToMore'>全部文章
+      <view class='headRight text-sub3' catchtap='goToAll'>全部文章
       <text class='iconfont icon-right'></text>
       </view>
     </view>

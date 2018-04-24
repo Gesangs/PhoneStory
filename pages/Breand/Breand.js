@@ -1,4 +1,4 @@
-import { handleText } from '../../base/class.js';
+import { handleList } from '../../base/class.js';
 Page({
   /**
    * 页面的初始数据
@@ -14,7 +14,7 @@ Page({
     },
     {
       title: 'Windows应用测评',
-      topic: '科技资讯',
+      topic: '通用 Windows 平台（UWP）',
       img: '../../image/UWP@2x.png',
       text: '体验千奇百怪的 Windows 应用程序，在桌面端及移动端的效率神器到小众精选，帮你更加透彻的了解应用之美。',
       total: "",
@@ -22,7 +22,7 @@ Page({
     },
     {
       title: '热评文章',
-      topic: '科技资讯',
+      topic: '数码',
       img: '../../image/Diss@2x.png',
       text: '针对当下的科技数码大事件作出评论，对新鲜产品第一时间上手体验，分享第一手的观点与感受，既有深度又有风度。',
       total: "",
@@ -32,20 +32,19 @@ Page({
     listNum: 0
   },
   getMoreList() {
-    const that = this;
     wx.request({
       url: 'https://zhuanlan.zhihu.com/api/columns/leaninglog/posts',
       data: {
         limit: 5,
-        offset: that.data.listNum
+        offset: this.data.listNum
       },
-      success: function (res) {
-        that.data.listNum += 5;
-        const moreCon = [...(that.data.textList), ...(that.handleList(res.data))]
+      success: (res) => {
+        this.data.listNum += 5;
+        const moreCon = [...(this.data.textList), ...(handleList(res.data))]
         const con = {
           textList: moreCon,
         };
-        that.setData(con);
+        this.setData(con);
       }
     })
   },
@@ -56,10 +55,10 @@ Page({
       fail: function (res) { console.log(res) }
     })
   },
-  goToMore: function (event) {
+  goToAll: function (event) {
     const con = this.data.listData[0]
     wx.navigateTo({
-      url: `../list/list?topic=${con.topic}&topicname=Latest Posts`,
+      url: `../list/list?columns=leaninglog&topicname=认知日志`,
       fail: function (res) { console.log(res) }
     })
   },
@@ -70,30 +69,21 @@ Page({
       fail: function (res) { console.log(res) },
     })
   },
-  handleList(list) {
-    const List = [];
-    list.forEach((item) => {
-      let text = handleText(item)
-      List.push(text);
-    });
-    return List;
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const that = this;
     wx.request({
       url: 'https://zhuanlan.zhihu.com/api/columns/leaninglog/posts',
       data: {
         limit: 5
       },
-      success: function (res) {
+      success: (res) => {
         const con = {
-          textList: that.handleList(res.data),
+          textList: handleList(res.data),
         };
-        that.data.listNum += 5;
-        that.setData(con);
+        this.data.listNum += 5;
+        this.setData(con);
       }
     })
   },

@@ -106,6 +106,7 @@
 .icon-right {
   font-size: 26rpx; 
   margin-left: 10rpx;
+  vertical-align: middle;
 }
 
 

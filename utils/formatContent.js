@@ -7,12 +7,11 @@ function _returnText(text) {
     text
   }] : [];
 }
-/\ssrc="(https:\/\/pic\d.zhimg.com\/v\d-[a-z0-9]{10,}_\w\.((jpg)|(png)))"/g
 export const handleCon = (item, banPictrue = false) => {
   const html = item.content
     .replace(/(<|<\/)(figure|noscript)>/g, '')
     .replace(/<img\ssrc="(https:\/\/pic\d.zhimg.com\/v\d-[a-z0-9]{10,}_\w\.((jpg)|(png)))[^>]+"/g, '<image>$1</image>')
-    .replace(/<img\ssrc="([^<>]+)"\salt[^>]+>/g, '<fimg>$1</fimg>');
+    .replace(/<img\ssrc="([^<>]+)"\salt[^>]+>/g, '<formula>$1</formula>');
   const pattern = /([^>]*)(<([a-z/][-a-z0-9_:.]*)[^>/]*(\/*)>)([^<]*)/g;
   const nodes = [];
   let matchArr;
@@ -30,8 +29,8 @@ export const handleCon = (item, banPictrue = false) => {
             }
           });
         }
-      break;
-      case 'fimg':
+        break;
+      case 'formula':
         if (!banPictrue) {
           nodes.push({
             name: 'img',
@@ -41,7 +40,7 @@ export const handleCon = (item, banPictrue = false) => {
             }
           });
         }
-      break;
+        break;
       case 'p':
         nodes.push({
           name: 'p',
@@ -50,34 +49,34 @@ export const handleCon = (item, banPictrue = false) => {
           },
           children: _returnText(matchArr[5])
         });
-      break;
+        break;
       case 'b':
         len = nodes.length - 1;
-        if (nodes[len].name !== "img")
-        nodes[len].children.push({
-          name: 'b',
-          children: _returnText(matchArr[5])
-        });
-      break;
+        if (nodes[len].name != "img" && nodes[len].children)
+          nodes[len].children.push({
+            name: 'b',
+            children: _returnText(matchArr[5])
+          });
+        break;
       case '/b':
         len = nodes.length - 1;
-        matchArr[5] ? nodes[len].children.push({
-            type: 'text',
-            text: matchArr[5]
-          }) : "";      
-      break;
+        matchArr[5] && nodes[len].children ? nodes[len].children.push({
+          type: 'text',
+          text: matchArr[5]
+        }) : "";
+        break;
       case 'i':
         len = nodes.length - 1;
         nodes[len].children.push({
           name: 'i',
           children: _returnText(matchArr[5])
         });
-      break;
+        break;
       case 'br':
         nodes.push({
           name: 'br'
         });
-      break;
+        break;
       case 'hr':
         nodes.push({
           name: 'hr',
@@ -85,7 +84,7 @@ export const handleCon = (item, banPictrue = false) => {
             class: 'text-hr',
           },
         });
-      break;
+        break;
       case 'h2':
         nodes.push({
           name: 'h2',
@@ -94,7 +93,7 @@ export const handleCon = (item, banPictrue = false) => {
           },
           children: _returnText(matchArr[5])
         });
-      break;
+        break;
       case 'li':
         nodes.push({
           name: 'li',
@@ -103,7 +102,7 @@ export const handleCon = (item, banPictrue = false) => {
           },
           children: _returnText(matchArr[5])
         });
-      break;
+        break;
     }
   }
 

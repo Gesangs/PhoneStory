@@ -1,4 +1,5 @@
-import { handleText } from '../../base/class.js';
+import { handleList } from '../../base/class.js';
+let url = 'https://zhuanlan.zhihu.com/api/columns/timer365/posts';
 Page({
 
   /**
@@ -26,14 +27,6 @@ Page({
       complete: function (res) { },
     })
   },
-  handleList(list) {
-    const List = [];
-    list.forEach((item) => {
-      let text = handleText(item)
-      List.push(text);
-    });
-    return List;
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -49,23 +42,27 @@ Page({
         sub = -sub;
       }
     }, 1000 / 60)
-    const that = this;
-    this.data.listType = options.topic;
     wx.setNavigationBarTitle({
       title: options.topicname,
     })
+    if (options.columns) {
+      url = `https://zhuanlan.zhihu.com/api/columns/${options.columns}/posts`;
+      this.data.listType = "";      
+    } else {
+      this.data.listType = options.topic;            
+    }
     wx.request({
-      url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',
+      url,
       data: {
         limit: 5,
-        topic: that.data.listType
+        topic: this.data.listType
       },
-      success: function (res) {
+      success: (res) => {
         const con = {
-          textList: that.handleList(res.data),
+          textList: handleList(res.data),
         };
-        that.data.listNum += 5;
-        that.setData(con);
+        this.data.listNum += 5;
+        this.setData(con);
       }
     })
   },
@@ -108,21 +105,20 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    const that = this;
     wx.request({
-      url: 'https://zhuanlan.zhihu.com/api/columns/timer365/posts',
+      url,
       data: {
         limit: 5,
-        offset: that.data.listNum,
-        topic: that.data.listType
+        offset: this.data.listNum,
+        topic: this.data.listType
       },
-      success: function (res) {
-        that.data.listNum += 5;
-        const moreCon = that.data.textList.concat(that.handleList(res.data))
+      success: (res) => {
+        this.data.listNum += 5;
+        const moreCon = this.data.textList.concat(handleList(res.data))
         const con = {
           textList: moreCon,
         };
-        that.setData(con);
+        this.setData(con);
       }
     })
   },

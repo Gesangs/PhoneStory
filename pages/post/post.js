@@ -75,7 +75,6 @@ Page({
   onLoad: function (options) {
     const conId = options.id;
     const share = options.share;
-    const that = this;
     if (wx.getStorageSync(`DZ${conId}`)) {
       this.setData({
         DZStyle: `../../image/guzhang.png`
@@ -83,12 +82,12 @@ Page({
     }
     wx.request({
       url: `https://zhuanlan.zhihu.com/api/posts/${conId}`,
-      success: function (res) {
+      success: (res) => {
         const con = {
           textCon: handleCon(res.data, wx.getStorageSync("banPictrue")),
           id: conId
         };
-        that.setData(con);
+        this.setData(con);
       }
     })
   },
@@ -136,8 +135,8 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh: function (e) {
+    console.log(e)
   },
 
   /**
