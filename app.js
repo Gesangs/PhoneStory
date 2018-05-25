@@ -2,7 +2,8 @@
 
 App({
     globalData: {
-      banPictrue: wx.getStorageSync("banPictrue")
+      banPictrue: wx.getStorageSync("banPictrue"),
+      winHeight: wx.getSystemInfoSync().screenHeight
     },
   },
   {
