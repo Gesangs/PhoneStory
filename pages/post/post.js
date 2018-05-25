@@ -47,7 +47,6 @@ Page({
     wx.createSelectorQuery().select('.dianZan2').boundingClientRect(function (rect) {
       rect.bottom
     }).exec((res) => {
-      console.log(res[0].bottom)
       // 如果不在悬浮状态就往上走
       // 用bottom判断是否为悬浮状态
       if (Number.parseInt(res[0].bottom) !== 461) {
