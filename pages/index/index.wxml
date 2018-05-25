@@ -1,5 +1,0 @@
-<import src="../../template/card.wxml"/>
-
-<view>
-   <template is="card" data="{{textList, deg, colorArr}}"></template>
-</view>
