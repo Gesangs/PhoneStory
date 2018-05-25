@@ -1,0 +1,128 @@
+/* pages/post.wxss */
+@import "../../base/textStyle.wxss";
+page {
+  background-color: #fff;
+}
+.titleImage-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600rpx;
+}
+.titleImage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 110%;
+  height: 660rpx;
+  margin-left: calc(0rpx - 110% / 2); 
+  background-repeat:no-repeat;
+  background-position: bottm center;
+  background-size: 108%;
+  transform-origin: 50% 0; 
+}
+
+.titleImageMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node_wrap {
+  position: absolute;
+  top: 456rpx;
+  display: block;
+  background-color: #fff;
+  width: 100%; 
+  border-radius: 46rpx 46rpx 0 0;
+}
+
+.Title {
+  font-weight: bold;
+  margin-top: 32rpx;
+  padding: 0rpx 40rpx;
+}
+
+.titles {
+  display: flex;
+  margin: 30rpx 40rpx 60rpx 40rpx;
+}
+
+.titles image {
+  flex: 0 0 60rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 21%;
+}
+
+.titles view {
+  display: flex;
+  flex-direction: column;
+  height: 60rpx;
+}
+.timer, .author {
+  padding: 0;
+  line-height: 0.7;
+  margin: 0 0 0 10rpx;  
+}
+
+.author {
+  font-size: 11px;
+}
+.timer {
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nodeStyle {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  margin: 50rpx 0;
+}
+
+.imgStyle {
+  margin: 20rpx 0;
+}
+
+.textStyle {
+  margin: 40rpx;
+}
+
+.h2Style{
+  margin: 60rpx 40rpx 20rpx 40rpx;
+}
+
+.fimgStyle{
+  max-width: calc(100% - 80rpx);
+  margin: 10rpx 40rpx;
+}
+
+.dianZan {
+  width: 135rpx;
+  height: 135rpx;
+  background-size: 100% 100%;
+  border-radius: 135rpx;
+  z-index: 100;
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+}
+
+.dianZan2 {
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+  background: linear-gradient(#bd4de8, #ff2366);
+  border-radius: 18rpx;
+  opacity: 0;
+  position: fixed;
+  bottom: 45rpx;
+  right: 65rpx;
+}

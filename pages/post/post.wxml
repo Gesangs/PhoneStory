@@ -1,0 +1,28 @@
+<!-- 文章详情页 -->
+<scroll-view style="height: {{ winHeight }}px" scroll-y enable-back-to-top bindscroll="bindScroll">
+<view class='titleImage-wrap'>
+  <view class='titleImage' style="background-image: url({{ textCon.titleImage }});   transform: scale({{ scale }});">
+  </view>
+    <view class='titleImageMask' style="background-color: rgba(0,0,0,{{ backBlur }})"></view>
+</view>
+<view class="node_wrap">
+  <view class='Title text-h1'>
+    {{ textCon.Title }}
+  </view>
+  <view class='titles'>
+    <image src="{{ textCon.headPic }}"></image>
+    <view>
+      <text class='author'>
+        {{ textCon.author }} 
+      </text>
+      <text class='timer'>
+        {{ textCon.timer }}
+      </text>
+    </view>
+  </view>
+  <rich-text class='nodeStyle' nodes="{{textCon.nodes}}"></rich-text>
+</view>
+<image animation="{{animation1}}" class='dianZan' src="{{DZStyle}}" bindtap='DianZan'></image>
+<view animation="{{animation2}}" class='dianZan2'>+{{ counts }}</view>   
+
+</scroll-view>

@@ -1,0 +1,39 @@
+@import "../../base/textStyle.wxss";
+@import "../../utils/iconfont.wxss";
+.settingList{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+}
+
+
+.icon-us, .icon-guzhang, .icon-wutu, .icon-right {
+   margin: 0 30rpx; 
+   flex: 0 0 26px; 
+}
+
+.icon-guzhang {
+  font-size: 44rpx;
+}
+
+.icon-wutu {
+  font-size: 40rpx;
+}
+.icon-right {
+  color: #c7c7cc;
+}
+
+.settingList .warp {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settingList .warp > switch{
+  margin-right: 30rpx;
+}
