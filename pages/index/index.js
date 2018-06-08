@@ -8,7 +8,7 @@ Page({
     textList: [],
     listNum: 0,
     deg: 135,
-    colorArr
+    colorArr,
   },
   goDetail: function (event) {
     const Id = event.currentTarget.dataset.id;
@@ -41,7 +41,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

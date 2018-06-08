@@ -1,6 +1,9 @@
-<!-- 详情页 -->
 
-<view style='margin-top: 40px;'>
+
+<!-- 详情页 -->
+<view>
+
+ <view style='margin-top: 40px;'>
   <view class='settingList' catchtap='goToAboutUs'>
     <text class='iconfont icon-us'></text>
     <view class='warp'>
@@ -26,5 +29,6 @@
     
   </view>
 
-  <button></button>
+</view> 
+
 </view>

@@ -1,6 +1,10 @@
+
+
 <!-- 分类 -->
+
 <view>
-  <view class="scroll_box"> 
+
+   <view class="scroll_box"> 
     <scroll-view scroll-x style="width: auto;overflow:hidden;">
       <view class="item_list" wx:for="{{ listData }}" wx:key="index" data-topic="{{item}}" bindtap="goTodetail">
         <image src='{{ item.img }}'></image>
@@ -32,5 +36,6 @@
         <view class='text-h3'>{{ item.title }}</view>
       </view>
     </scroll-view>
-  </view>
+  </view> 
+
 </view>

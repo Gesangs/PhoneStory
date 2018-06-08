@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banPictrue: app.globalData.banPictrue
+    banPictrue: app.globalData.banPictrue,
   },
   setBanPicture: function(e) {
     const value = e.detail.value
@@ -38,7 +38,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**

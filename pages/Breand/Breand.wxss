@@ -1,5 +1,6 @@
 @import "../../base/textStyle.wxss";
 @import "../../utils/iconfont.wxss";
+
 .scroll_box{
   width: 100%;
   box-sizing: border-box;
